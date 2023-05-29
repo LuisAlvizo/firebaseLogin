@@ -21,7 +21,7 @@ var config = {
   styleUrls: ['./registro.component.css']
 })
 // export class RegistroComponent implements OnInit {
-  export class RegistroComponent{
+export class RegistroComponent {
   registrarU: FormGroup;
   reCaptchaVerifier: any;
   tel: string = '';
@@ -50,20 +50,21 @@ var config = {
       return;
     }
     this.reCaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', { size: 'invisible' });
-    // this.afAuth
-    //   .createUserWithEmailAndPassword(email, contra)
-    //   .then(() => {
-    //     this.toastr.success('Registro exitoso', 'Usuario registrado');
-    //     this.router.navigate(['/login']);
-    //   }).catch((error) => {
-    //     console.log(error);
-    //     this.toastr.error(this.firebaseError(error.code), 'Error');
-    //   })
+    this.afAuth
+      .createUserWithEmailAndPassword(email, contra)
+      .then(() => {
+        // this.toastr.success('Registro exitoso', 'Usuario registrado');
+      }).catch((error) => {
+        console.log(error);
+        this.toastr.error(this.firebaseError(error.code), 'Error');
+        return;
+      })
     firebase.auth()
       .signInWithPhoneNumber(this.tel, this.reCaptchaVerifier)
       .then((confirmation) => {
         console.log(confirmation);
         localStorage.setItem('verID', JSON.stringify(confirmation.verificationId));
+        this.toastr.success('Registro exitoso', 'Usuario registrado');
         this.router.navigate(['/verificaciontel']);
       }).catch((error) => {
         this.toastr.error(error.code, 'Error');
