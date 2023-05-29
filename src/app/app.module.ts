@@ -21,7 +21,7 @@ import { OpLoginComponent } from './componentes/op-login/op-login.component';
 import { LoginTelComponent } from './componentes/login-tel/login-tel.component';
 import { OpRegistroComponent } from './componentes/op-registro/op-registro.component';
 import { RegistroTelComponent } from './componentes/registro-tel/registro-tel.component';
-import { environment } from './environments/environment.prod';
+import { environment } from './environments/environment';
 import { VerificacionTelComponent } from './componentes/verificacion-tel/verificacion-tel.component';
 
 @NgModule({
