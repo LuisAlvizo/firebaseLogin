@@ -1,0 +1,16 @@
+<div class="contenedor">
+    <div class="contenido">
+        <img class="loginImg mb-3" src="../../../assets/media/img/email.png" alt="registromail">
+        <h1 class="titulo mb-3">Registro</h1>
+        <form (ngSubmit)="registrarTel()" [formGroup]="registrarU">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" formControlName="tel" [(ngModel)]="tel" min="10" max="13" name="tel">
+                <label>Teléfono</label>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-primary btn-lg" id="sign-in-button" type="submit">Aceptar</button>
+            </div>
+            <a routerLink="/opregistro">Volver</a>
+        </form>
+    </div>
+</div>

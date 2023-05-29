@@ -1,0 +1,25 @@
+<div class="contenedor">
+    <div *ngIf="!cargando" class="contenido">
+        <img class="loginImg mb-3" src="../../../assets/media/img/email.png" alt="registromail">
+        <h1 class="titulo mb-3">Registro</h1>
+        <form (ngSubmit)="registrar()" [formGroup]="registrarU">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+                <label>Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control mb-3" formControlName="contra" placeholder="Password">
+                <label>Contraseña</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control mb-3" formControlName="repetirContra" placeholder="Password">
+                <label>Repetir contraseña</label>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-primary btn-lg" type="submit">Aceptar</button>
+            </div>
+            <a routerLink="/opregistro">Volver</a>
+        </form>
+    </div>
+    <app-spinner *ngIf="cargando"></app-spinner>
+</div>

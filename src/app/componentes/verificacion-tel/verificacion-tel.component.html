@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <div class="contenido2">
+        <img class="loginImg" src="../../../assets/media/img/verification.png" alt="verification">
+        <h1 class="titulo mb-3">Código de verificación</h1>
+        <br>
+        <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config" ></ng-otp-input>
+        <div class="d-grid gap-2 mt-3">
+            <button (click)="handleClick()" class="btn btn-primary btn-lg mt-3" id="sign-in-button" type="button">Aceptar</button>
+        </div>
+    </div>
+</div>
