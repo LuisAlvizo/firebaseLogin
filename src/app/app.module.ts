@@ -23,6 +23,7 @@ import { OpRegistroComponent } from './componentes/op-registro/op-registro.compo
 import { RegistroTelComponent } from './componentes/registro-tel/registro-tel.component';
 import { environment } from './environments/environment';
 import { VerificacionTelComponent } from './componentes/verificacion-tel/verificacion-tel.component';
+import { RegUsuariosComponent } from './componentes/reg-citas/reg-citas.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { VerificacionTelComponent } from './componentes/verificacion-tel/verific
     LoginTelComponent,
     OpRegistroComponent,
     RegistroTelComponent,
-    VerificacionTelComponent
+    VerificacionTelComponent,
+    RegUsuariosComponent
   ],
   imports: [
     BrowserModule,

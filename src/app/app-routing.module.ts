@@ -10,10 +10,11 @@ import { LoginTelComponent } from './componentes/login-tel/login-tel.component';
 import { OpRegistroComponent } from './componentes/op-registro/op-registro.component';
 import { RegistroTelComponent } from './componentes/registro-tel/registro-tel.component';
 import { VerificacionTelComponent } from './componentes/verificacion-tel/verificacion-tel.component';
+import { RegUsuariosComponent } from './componentes/reg-citas/reg-citas.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'oplogin', pathMatch: 'full' },
-  { path: 'oplogin', component: OpLoginComponent },
+  { path: 'oplogin', component: RegUsuariosComponent },
   { path: 'opregistro', component: OpRegistroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logintel', component: LoginTelComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'registrotel', component: RegistroTelComponent },
   { path: 'verificacion', component: VerificacionComponent },
   { path: 'verificaciontel', component: VerificacionTelComponent },
+  { path: 'regUser', component: RegUsuariosComponent },
   { path: '**', redirectTo: 'oplogin', pathMatch: 'full' },
 ];
 
